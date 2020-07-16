@@ -1,0 +1,20 @@
+SELECT 
+    IF(A+B>C AND A+C>B AND B+C>A, 
+       IF(A=B AND B=C, 'Equilateral', 
+          IF(A=B OR B=C OR A=C, 'Isosceles', 'Scalene')
+         ), 
+   'Not A Triangle') 
+   FROM TRIANGLES;
+
+/*select case 
+    when a = b and b = c then "Equilateral"
+    when a = b and a <> c then "Isosceles"
+    when a = c and a <> b then "Isosceles"
+    when b = c and a <> b then "Isosceles"
+    when a + b <= c then "Not A Triangle"
+    when b + c <= a then "Not A Triangle"
+    when a + c <= b then "Not A Triangle"
+    else "Scalene"
+    end
+    from triangles;
+    */
