@@ -1,0 +1,1 @@
+SELECT (months*salary) as earn, COUNT(*) FROM Employee GROUP BY earn ORDER BY earn DESC LIMIT 1;
